@@ -184,7 +184,62 @@ public class PokerHandCheck{
         }
         //these if statements compare, card for card, the cards recieved from the draw
         //if it's a pair, the compiler prints it. if not, it's a high card
-        if (card == card1) {
+        if (card == card1 && card == card2){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card == card1 && card == card2){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card == card1 && card == card3){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card == card1 && card == card4){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card == card2 && card == card3){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card == card2 && card == card4){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card1 == card2 && card1 == card3){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card1 == card2 && card1 == card4){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card2 == card3 && card2 == card4){
+            System.out.println("You have three of a kind.");
+        }
+        else if (card == card1 && card2 == card3) {
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card1 && card2 == card4) {
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card1 && card3 == card4) {
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card2 && card1 == card3) {
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card2 && card1 == card4){
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card3 && card1 == card2){
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card3 && card1 == card4){
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card4 && card1 == card2){
+            System.out.println("You have a two pair.");
+        }
+        else if (card == card4 && card1 == card3){
+            System.out.println("You have a two pair.");
+        }
+
+        else if (card == card1) {
             System.out.println("You have a pair.");
         }
         else if (card == card2) {
@@ -213,7 +268,8 @@ public class PokerHandCheck{
         }
         else if (card3 == card4) {
             System.out.println("You have a pair.");
-        } 
+        }
+        
         else {
             System.out.println("You have a high card hand.");
         }
