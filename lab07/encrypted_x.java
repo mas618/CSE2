@@ -34,7 +34,7 @@ public class encrypted_x{
         String marker = "*"; //creates the * character as a string
         int counter = 0;
         int counter1 = 0;
-        for (counter = 0; counter <= size; counter++){ as counter increases, it prints across the rows
+        for (counter = 0; counter <= size; counter++){ //as counter increases, it prints across the rows
             //System.out.println(marker);
             for (counter1 = 0; counter1 <=size; counter1++){ //this loop is used to integrate the spaces in an x pattern for the program
                 if (counter1 == counter){ //left to right, top down spaces. if the counters are the same, prints a space instead of a star
