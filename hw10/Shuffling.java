@@ -8,22 +8,23 @@ Check Java Program
       java Shuffling
 Program utilizes loops in order to print various numbers and symbols*/
 
-public class Test {
+public class Shuffling {
     public static void shuffle(String[] A){
-        String temp = "";
-        for(int i = 0; i < 60; i++){
-            int j = (int)(Math.random()*51)+1;
-            temp = A[j];
+        String temp = ""; //temp variable
+        for(int i = 0; i < 60; i++){ //sets up counter
+            int j = (int)(Math.random()*51)+1; //generates random variable 
+            temp = A[j]; //stores the placeholder as a string
             A[j] = A[0];
-            A[0] = temp;
+            A[0] = temp; //converts to shuffle the deck
         }
     }
     public static void printArray(String[] A){
         int i = 0;
         do{
-        System.out.print(A[i] + " ");
+        System.out.print(A[i] + " "); //prints out the string
         i++;
-        } while (i<A.length);
+        } while (i<A.length); //do it while it is less than the length
+        System.out.println("");
     }
     public static String[] randomizeHand(String[] A){
         int i = 0;
