@@ -45,6 +45,30 @@ public class CSE2Linear {
         } while (i<A.length); //do it while it is less than the length
         System.out.println("");
     }
+    public static boolean binarySearch(int key){ 
+         int[] data = new int[15];
+         int size = 0;
+         int low = 0;
+         int high = size - 1;
+          
+         while(high >= low) {
+             int middle = (low + high) / 2;
+             if(data[middle] == key) {
+                 return true;
+             }
+             if(data[middle] < key) {
+                 low = middle + 1;
+             }
+             if(data[middle] > key) {
+                 high = middle - 1;
+             }
+        }
+        if (true){
+            System.out.println(key + " was in the list.");
+        }
+        System.out.println(key + " was not in the list with 4 iterations.");
+        return false;
+    }
     public static void main(String[] args) {
         Scanner myScanner =new Scanner(System.in);
         int stringSize = 15; //fifteen grades, can be adjusted to reflect number of students
@@ -63,16 +87,7 @@ public class CSE2Linear {
         printArray(studentGrades);
         System.out.println("Enter a value to find: ");
         int search = myScanner.nextInt(); //input grade to find value
-        for (int c = 0; c <= 15; c++){
-            if (c == 15){ //if the input is not in the array, prints the next line
-                System.out.println(search + " is not in the list with 15 iterations.");
-                break;
-            }
-            if (studentGrades[c] == search){ //if it is in the array, prints the location
-                System.out.println(search + " is in the present location: " + (c + 1));
-                break;
-            }
-        }
+        binarySearch(search);
         System.out.println("Shuffled grades: ");
         shuffle(studentGrades); //shuffles the array
         printArray(studentGrades);
